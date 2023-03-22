@@ -37,6 +37,7 @@ double avi2 = CalcoliHelper.AbsoluteValueOfADoubleNumber(num3);
 double lea2 = CalcoliHelper.LeastOfTwoIntegers(num3, num4);
 double max2 = CalcoliHelper.MaximumOfTwoDoubleNumbers(num3, num4);
 
+Console.WriteLine();
 Console.WriteLine($"La somma tra {num3} e {num4} è {sum2}");
 Console.WriteLine($"La differenza tra {num3} e {num4} è {dif2}");
 Console.WriteLine($"La moltiplicazione tra {num3} e {num4} è {mul2}");

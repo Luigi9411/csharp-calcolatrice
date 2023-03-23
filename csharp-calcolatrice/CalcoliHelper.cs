@@ -9,13 +9,13 @@ namespace csharp_calcolatrice
 {
     public static class CalcoliHelper
     {
-        public static int SumOfTwoIntegers(int num1, int num2) => num1 + num2;
-        public static double SumOfTwoDoubleNumbers(double num3, double num4) => num3 + num4;
-        public static int DifferenceBetweenTwoIntegers(int num1, int num2) => num1 / num2;
-        public static double DifferenceBetweenTwoDoubleNumbers(double num3, double num4) => num3 / num4;
-        public static int MultiplicationOfTwoIntegers(int num1, int num2) => num1 * num2;
-        public static double MultiplicationOfTwoDoubleNumbers(double num3, double num4) => num3 * num4;
-        public static int AbsoluteValueOfAnInteger(int num1)
+        public static int Sum(int num1, int num2) => num1 + num2;
+        public static double Sum(double num3, double num4) => num3 + num4;
+        public static int Difference(int num1, int num2) => num1 - num2;
+        public static double Difference(double num3, double num4) => num3 - num4;
+        public static int Multiplication(int num1, int num2) => num1 * num2;
+        public static double Multiplication(double num3, double num4) => num3 * num4;
+        public static int AbsoluteValue(int num1)
         {
             {
                 if (num1 < 0)
@@ -29,7 +29,7 @@ namespace csharp_calcolatrice
             }
         }
 
-        public static double AbsoluteValueOfADoubleNumber(double num3)
+        public static double AbsoluteValue(double num3)
         {
             {
                 if (num3 < 0)
@@ -43,7 +43,7 @@ namespace csharp_calcolatrice
             }
         }
 
-        public static int LeastOfTwoIntegers(int num1, int num2)
+        public static int Least(int num1, int num2)
         {
             {
                 if (num1 < num2)
@@ -61,7 +61,7 @@ namespace csharp_calcolatrice
             }
         }
 
-        public static double LeastOfTwoIntegers(double num3, double num4)
+        public static double Least(double num3, double num4)
         {
             {
                 if (num3 < num4)
@@ -79,7 +79,7 @@ namespace csharp_calcolatrice
             }
         }
 
-        public static int MaximumOfTwoIntegers(int num1, int num2)
+        public static int Maximum(int num1, int num2)
         {
             {
                 if (num1 < num2)
@@ -93,7 +93,7 @@ namespace csharp_calcolatrice
             }
         }
 
-        public static double MaximumOfTwoDoubleNumbers(double num3, double num4)
+        public static double Maximum(double num3, double num4)
         {
             {
                 if (num3 < num4)
@@ -105,6 +105,24 @@ namespace csharp_calcolatrice
                     return num3;
                 }
             }
+        }
+
+        public static int GetExponentiationFunction(int num1, int num2)
+        {
+            if (num2 == 0 && num1 == 0)
+            {
+                return 1;
+            }
+            int result = 1;
+            for (int i = 0; i < AbsoluteValue(num2); i++)
+            {
+                result *= num1;
+            }
+            if (num2 < 0)
+            {
+                result = 1 / result;
+            }
+            return result;
         }
     }
 }
